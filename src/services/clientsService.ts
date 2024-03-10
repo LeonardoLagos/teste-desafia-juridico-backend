@@ -27,7 +27,17 @@ export class ClientsService {
 
     async getAllclients() {
         try {
-            const t = await db.query('SELECT * FROM clients')
+            const t = await db.query(`
+            SELECT 
+            	cl.id,
+            	cl.name,
+            	cl.email,
+            	cl.telephone,
+            	st.descricao
+            FROM
+            	clients cl
+            	INNER JOIN 
+            		status st ON cl.status = st.id`)
             return t.rows as clients[];
         } catch {
             throw new Error('Erro na consulta')
