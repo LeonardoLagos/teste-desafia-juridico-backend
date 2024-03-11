@@ -33,7 +33,7 @@ export class ClientsService {
             	cl.name,
             	cl.email,
             	cl.telephone,
-            	st.descricao
+            	st.descricao as status
             FROM
             	clients cl
             	INNER JOIN 
