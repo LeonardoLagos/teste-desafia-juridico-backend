@@ -12,3 +12,5 @@ esse endpoint cria registros no banco de dados para teste, basta passar a quanti
 { 
     "amount": 50
 }
+
+link para diagrama do banco de dados: https://dbdiagram.io/d/clean_cust-65ec7e99b1f3d4062c84199b
